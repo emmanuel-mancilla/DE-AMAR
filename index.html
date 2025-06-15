@@ -1,10 +1,138 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page con Carrusel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffe4e1, #fff0f5);
+        }
+
+        .texto-amor {
+            background-color: #fff0f5;
+            border: 2px solid #f8c8dc;
+            border-radius: 15px;
+            padding: 30px;
+            white-space: pre-wrap;
+            text-align: justify;
+            text-indent: 2em;
+            line-height: 1.8;
+            box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+            font-family: 'Georgia', serif;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+            .texto-amor::before {
+                content: "❤️";
+                position: absolute;
+                top: -15px;
+                left: -15px;
+                font-size: 2rem;
+            }
+
+            .texto-amor::after {
+                content: "❤️";
+                position: absolute;
+                bottom: -15px;
+                right: -15px;
+                font-size: 2rem;
+            }
+
+        .btn-musica {
+            background-color: #ff4d6d;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 25px;
+            color: white;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-musica:hover {
+                background-color: #e63950;
+            }
+    </style>
 </head>
 <body>
+    <div class="container mt-5">
+        <!-- Carrusel -->
+        <div id="carruselFotos" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="DE-AMAR/fotos/1.jpg"  class="d-block w-100 object-fit-cover" style="height: 1000px;" alt="Foto 1">
+                </div>
 
+
+                <div class="carousel-item">
+                    <img src="DE-AMAR/fotos/2.jpg" class="d-block w-100 object-fit-cover" style="height: 1000px;" alt="Foto 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="DE-AMAR/fotos/3.jpg" class="d-block w-100 object-fit-cover" style="height: 1000px;" alt="Foto 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="DE-AMAR/fotos/4.jpg" class="d-block w-100 object-fit-cover" style="height: 1000px;" alt="Foto 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="DE-AMAR/fotos/5.jpg" class="d-block w-100 object-fit-cover" style="height: 1000px;" alt="Foto 5">
+                </div>
+                <div class="carousel-item">
+                    <img src="DE-AMAR/fotos/6.jpg" class="d-block w-100 object-fit-cover" style="height: 1000px;" alt="Foto 6">
+                </div>
+                <div class="carousel-item">
+                    <img src="DE-AMAR/fotos/7.jpg" class="d-block w-100 object-fit-cover" style="height: 1000px;" alt="Foto 7">
+                </div>
+
+
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselFotos" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselFotos" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <div class="text-center mt-4">
+            <audio id="musicaFondo" loop>
+                <source src="DE-AMAR/musica/cancion.mp3" type="audio/mpeg">
+                Tu navegador no soporta el audio.
+            </audio>
+
+            <button id="botonMusica" onclick="toggleMusica()" class="btn btn-musica">
+                💖 Reproducir Música
+            </button>
+        </div>
+    </div>
+    <!-- Texto temático amoroso solo lectura -->
+    <div class="mt-5">
+        <h2 class="mb-4">MONS</h2>
+        <div class="texto-amor">
+            Dentro de la relación maduramos y mejoramos, como al primer año te mande un amor.exe ahora te mando una aplicación web. Es más difícil de programar la primera, pero con el tiempo se pasó de esa programación más compleja a una programación asistida más sencilla y con mejores resultados. En la primera al usarse más lógica y código un problema aunque sea leve podía llegar a ser garrafal, ya que las líneas de errores no son claras y muchas veces no representan el problema de fondo.  Nosotros en la relación estamos en un punto en el cual con muy poco esfuerzo tenemos resultados increíbles podemos manejar problemas y errores de manera muy eficiente, después de pelearla mucho pudimos conseguir una relación muy feliz. Todas las peleas se solucionan y cuando estamos juntos no paramos de reír, no paramos de pasarla bien y disfrutar. Todos los días nos extrañamos aunque hablamos 24/7, sos lo primero que pienso cuando me despierto y lo último que pienso cuando me voy a dormir. La semana pasada que estuve estudiando para rendir el viernes fue durísima porque nos queríamos ver todos los días.  Entiendo que el error es muy doloroso, hiriente y desalentador. Pero también crecimos juntos en esta relación, y aunque me haya equivocado en el pasado (hablando del pasado pasado digamos no los problemas de ahora) no quiere decir que me equivoque en el futuro ya que hoy somos diferentes que hace años y en años seremos diferentes a lo que somos ahora.
+            Ayer me equivoque, un error gravísimo, lo entiendo y me hago cargo. Haya pasado o no el hecho de que no lo pueda recordar remarca que todavía no soy tan maduro como pensaba, esto va a ser un antes y un después en mi vida mas allá de si decidas perdonarme o no con el tema de la humildad para reconocer cuando necesito ayuda o que alguien me recuerde las cosas. Aunque en sí el problema de fondo mío es amplio, la actitud canchera de esta todo bien no pasa nada es una posición inmadura y poco lógica para una persona que alardea tanto de usar la lógica y el pensamiento. También hoy no pude responderte a lo que dijiste de que no te acompañaba en tus momentos duros, yo creo que cuando tu mamá se enfermó y todo lo que paso yo estaba ahí. Me equivoqué al no ir cuando la iban a operar porque vos me necesitabas ahí y yo no estuve y de eso me voy a arrepentir toda la vida. Pero siempre quiero estar para tus momentos duros, para darte un hombro donde apoyarte o intentar solucionar lo solucionable como siempre intento hacer. Estoy intentando activamente constantemente no medir todo con mi propia vara porque dentro de las infinitas cosas que me enseñaste esa es una que me cuesta digerir.  Odio verte llorar aunque se que tenes el llanto fácil(como yo cuando miramos una peli o SONRIO en los momentos felices) jajajaja y detesto los momentos en los que te sentis mal, ya sea porque se rompe algo o te va mal en alguna cosa. Pero bueno tengo muchísimos defectos y entiendo que estes molesta conmigoi o no estes segura de si seguir conmigo seria lo mejor. Sin embargo, creo que puedo aportar muchísimas cosas buenas en tu vida, presente y futuro. Creo que nos amamos muchísimo y lo que tenemos es tan grande y tan IMPOSIBLE de encontrar que seria una verdadera pena que se vaya todo por la borda por un error de este tipo. No quiero hablar mucho de los sentimientos para no volver a repetirme en mis palabras que ya te dije mil veces pero sabes que sos la mujer de mi vida, años enamorados y cada vez más fuerte, te amo y me encantas en todas tus formas y me fascinas en todos tus ámbitos, me encanta cuando me contas cosas de tu facu y cuando me echas de darte besitos cuando queres dormir. Me gusta escucharte cuando te levantas a la mañana para irte a trabajar, me gustaría tener más consciencia para saludarte jajajaja pero estoy muy dormido siempre. Ojalá, como te dije antes, en tu gran bondad encuentres la fuerza y la esperanza necesarias para perdonarme este error y poder seguir en este proyecto JUNTOS como siempre, de la mano para todos lados. O por lo menos hablar y ver si tenemos ganas de vernos y como van resultando las cosas. Las fotos son alusivas a nuestro tiempo juntos pero representan todo lo que significamos juntos, amor, familia, felicidad, viajes, etc..
+            EN FIN, DE AMAR, DE QUERER, DE EXTRAÑAR. Ojala que de PERDONAR, perdonar no significaría hacer que no paso nada, sino hacerme cargo del error y poder seguir hablando y todo para ir limando asperezas con el fin de volver a estar en pareja de novios. Pero bueno ojalá sientas lo que yo siento de no poder vivir sin vos.
+
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const audio = document.getElementById("musicaFondo");
+        const boton = document.getElementById("botonMusica");
+
+        function toggleMusica() {
+            if (audio.paused) {
+                audio.play();
+                boton.innerHTML = "⏸️ Pausar Música";
+            } else {
+                audio.pause();
+                boton.innerHTML = "💖 Reproducir Música";
+            }
+        }
+    </script>
 </body>
 </html>
